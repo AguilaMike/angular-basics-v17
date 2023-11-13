@@ -1,0 +1,12 @@
+<div class="px-4 sm:px-0">
+  <h3 class="text-base font-semibold leading-7 text-gray-900">DBZ</h3>
+  <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personajes.</p>
+</div>
+
+<div class="mt-6 border-t border-gray-100">
+
+  <div class="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3 py-4">
+    <app-dbz-list class="xl:col-span-2" [characters]="characters" (onDeleteCharacter)="onDeleteCharacter($event)"></app-dbz-list>
+    <app-dbz-add class="max-w-2xl" (onNewCharacter)="onNewCharacter($event)"></app-dbz-add>
+  </div>
+</div>
