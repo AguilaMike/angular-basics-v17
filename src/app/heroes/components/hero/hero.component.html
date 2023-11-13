@@ -1,0 +1,25 @@
+<h1>{{ name }}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd> {{ name }} </dd>
+
+  <td>Edad:</td>
+  <dd> {{ age }} </dd>
+
+  <td>Método:</td>
+  <dd> {{ getHeroDescription() }} </dd>
+
+  <td>Capitalizado:</td>
+  <dd> {{ capitalizedName }} </dd>
+</dl>
+
+@if (changes.isVisibleName) {
+  <button (click)="changeHero()">Cambiar nombre</button>
+}
+@if (changes.isVisibleAge) {
+  <button (click)="changeAge()">Cambiar edad</button>
+}
+@if (changes.reset) {
+  <button (click)="resetHero()">Reset</button>
+}
